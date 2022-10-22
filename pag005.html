@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídia</title>
+
+    <link rel="shortcut icon" href="arq/porquinho.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conteúdo de mídia</h1>
+    <h2>Imagem dinâmica, que se adequa ao tamanho da tela</h2>
+    <picture>
+        <source media="(max-width: 750px)" srcset="arq/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="arq/foto-m.png" type="image/png">
+        <img src="arq/foto-g.png" alt="fogo grande">
+    </picture>
+
+    <h2>Áudio</h2>
+    <audio src="arq/guanacast-33.mp3" controls autoplay preload="metadata"></audio>
+    <audio src="arq/happy-mistake.mp3" controls autoplay loop preload="metadata"></audio>
+
+    <h2>Vídeos</h2>
+    <video src="arq/pexels-vlada-karpovich-9968974.mp4" width="400" controls autoplay loop></video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fQMp2sHVimE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br><br>
+    <p><a href="index.html" rel="previous">Voltar</a></p>
+</body>
+</html>
