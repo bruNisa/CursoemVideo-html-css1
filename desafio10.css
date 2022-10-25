@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'droid';
+    src: url(fontes/idroid.otf) format('opentype');
+}
+
+body{
+    background-color: #c5ebd6;
+}
+
+h2{
+    font-family: 'droid';
+}
