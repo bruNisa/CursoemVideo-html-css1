@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@font-face {
+    font-family: 'barcelona';
+    src: url(fontes/Barcelona.otf) format('opentype');
+}
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+:root{
+    --cor1:#FD869C;
+    --cor2:#E378C1;
+    --cor3:#F091FA;
+    --cor4:#BB78E3;
+    --cor5:#B086FD;
+
+    --fonte-destaque: 'Fasthand', cursive;;
+    --fonte-padrao:Arial, Verdana, Helvetica, sans-serif;
+    --fonte-especial:'barcelona';
+}
+
+
+body{
+    background-image: linear-gradient(to right, var(--cor5),var(--cor3));
+    background-attachment: fixed; /*para ficar um degradê fixo quando rolar a página*/
+}
+
+header{
+    background-color: var(--cor2);
+    color: white;
+    text-align: center;
+    margin:auto;
+    min-width: 300px;
+    max-width: 760px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+    padding: 20px;
+}
+
+h1{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.192);
+}
+h2{
+    margin-top: 10px;
+}
+h2::after{
+    content:'*';
+}
+h3{
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 1.4em;
+}
+h3:hover{
+    background-color: rgba(255, 255, 0, 0.171);
+}
+
+nav{
+    margin:auto;
+    min-width: 300px;
+    max-width: 800px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+    background-color: var(--cor2);
+    padding-bottom: 5px;
+}
+nav a{
+    text-decoration: none;
+    padding: 5px;
+    color:gray;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition-duration: .5s;
+}
+nav a:hover{
+    background-color: var(--cor5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+}
+
+main{
+    background-color: var(--cor3);
+    text-align: center;
+    margin:auto;
+    min-width: 300px;
+    max-width: 770px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+    padding: 15px;
+}
+main h2{
+    font-family: var(--fonte-especial);
+    background-image: linear-gradient(to right, var(--cor2),transparent);
+}
+main p{
+    font-family: var(--fonte-padrao);
+    text-align: justify;
+    text-indent: 20px;
+    margin-top: 15px;
+    line-height: 1.3em; /*espaçamento entre linhas*/
+}
+img{
+    width: 80%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.116);
+    margin: 20px 0px 20px 0px;
+    border: 10px solid pink;
+    border-radius: 5px;
+}
+img:hover{
+    scale: 1.05;
+}
+aside{
+    background-color: pink;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+footer{
+    background-color: var(--cor4);
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    color: white;
+    margin-top: 20px;
+}
