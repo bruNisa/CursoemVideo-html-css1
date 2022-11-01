@@ -1,0 +1,95 @@
+    @import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+    :root{
+        --fonte1: Verdana, Geneva, Tahoma, sans-serif ;
+        --fonte2:'Passion One', cursive;
+        --fonte3:'Sriracha', cursive;
+    }
+
+    *{
+        margin:0px;
+        padding: 0px;
+    }
+
+    html, body{
+        min-height: 100%; /* ou vh, viewport height*/
+        background-color: darkgrey;
+        font-family: var(--fonte1);
+    }
+
+    header {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-style: normal;
+        margin: auto;
+    }
+
+    header > h1{
+        padding-top: 50px;
+        /*text-transform: uppercase;  = para colocar tudo em maiúsculo*/
+        font-variant: small-caps; /*coloca tudo em maíusculo destacando a primeira, fica mais harmonioso assim*/
+        font-family: var(--fonte2);
+        font-size: 10vw;
+    }
+
+    header > p{
+        padding-bottom: 50px;;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    
+    section {
+        font-family: var(--fonte3);
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        padding-left: 30px;
+        line-height: 2em;
+        font-size: 3.5vw;
+    }
+    section > p{
+        padding-bottom: 2em;
+    }
+
+    section.normal{
+        background-color: white;
+        color: black;
+    }
+
+    section.imagem{
+        background-color: rgba(0, 255, 255, 0.555);
+        color: white;
+        box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.493);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    section.imagem > p{
+        display: inline-block;
+        padding:5px;
+        background-color: rgba(0, 0, 0, 0.527);
+        text-shadow: 1px 1px 0px black;
+    }
+
+    section#img01{
+        background-image: url("imagens/background001.jpg");
+        background-position: right center;
+    }
+    section#img02{
+        background-image: url("imagens/background002.jpg");
+    }
+
+    footer{
+        font-family: var(--fonte2);
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
