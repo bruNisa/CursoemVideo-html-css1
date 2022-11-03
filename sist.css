@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'space';
+    src: url("sist/space\ age.ttf") format('truetype');
+}
+
+:root{
+    --cor0:#b5b0e9;
+    --cor1: #9288EE;
+    --cor2: #5240EB;
+    --cor3: #3F32B8;
+    --cor4: #251D6B;
+    --cor5: #423D6B;
+
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'space';
+    --fonte3:'Roboto', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1{
+    background-color: var(--cor5);
+    color: white;
+    font-family: var(--fonte2);
+    padding:10px;
+    width: 300px;
+    margin:auto;
+}
+h1:hover{
+    scale: 1.05;
+}
+
+h2, h3{
+    font-family: var(--fonte3);
+    color:white;
+    margin-top: 20px;
+    text-align: center;
+    font-variant: small-caps; /*coloca tudo em maíusculo destacando a primeira, fica mais harmonioso assim*/
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    transition-duration: .5s;
+}
+a:hover{
+    text-decoration: underline;
+    background-color: var(--cor2);
+}
+.menu, .menusup{
+    margin-top: 30px;
+}
+
+main{
+    display: flex;
+    background-image: linear-gradient(to right, var(--cor3), var(--cor0));
+    margin-top: 190px;
+}
+
+.secsistemas{
+    background-color: var(--cor5);
+    max-width: 300px;
+    min-width: 200px;
+    position: fixed;
+}
+.secsistemas > h3{
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+}
+.menulat > p{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.principal{
+    padding: 20px;
+    margin:auto;
+    max-width: 800px;
+    min-width: 200px;
+}
+
+.caixa00{
+    max-height: 800px;
+    min-height: 600px;
+    background-image: url("sist/pc\ \(4\)-md.jpg");
+    background-size: cover;
+    padding-top: 25px;
+    margin-bottom: 50px;
+}
+.caixa00 > p{
+    text-align: justify;
+    margin: 25px;
+    line-height: 2em;
+    text-indent: 18px;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    padding: 15px;
+}
+
+.caixa01{
+    display: flex;
+}
+.caixa01 > div{
+    background-image: url("sist/pc2.jpg");
+    background-position: left top;
+}
+.caixa02{
+    display: flex;
+}
+.caixa02 >div {
+    background-image: url("sist/pc2.jpg");
+    background-position: center center;
+
+}
+.caixa03{
+    display: flex;
+}
+.caixa03> div{
+    background-image: url("sist/pc2.jpg");
+    background-position: right bottom;
+}
+
+.caixas{
+    margin: auto;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: var(--cor0);
+    max-width: 300px;
+    min-height: 300px;
+}
+
+.caixas a{
+    padding: 10px;
+    background-color: var(--cor1);
+    margin-bottom: 20px;
+}
+.caixas a:hover{
+    background-color: var(--cor2);
+}
+.caixas ul{
+    list-style-position: inside;
+    background-color: rgba(0, 0, 0, 0.425);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+footer{
+    background-color: var(--cor5);
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+footer > p{
+    padding: 10px;
+    line-height: 1.5em;
+    
+}
