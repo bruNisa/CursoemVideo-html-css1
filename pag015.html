@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="arq/porquinho.ico" type="image/x-icon">
+    <title>IFrames</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(192, 167, 103);
+        }
+
+        h1{
+            text-decoration: underline;
+            font-size: 3em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.308);
+            text-align: center;
+        }
+
+        nav{
+            text-align: center;
+        }
+
+        a{
+            text-decoration: none;
+            background-color: orange;
+            color: black;
+            margin: 7px;
+            padding: 7px;
+            border-radius: 3px ;
+            font-style: bolder;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
+        }
+        a:hover{
+            background-color: rgba(255, 166, 0, 0.61);
+        }
+
+        iframe {
+            display: block;
+            margin: auto;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>IFrames</h1>
+    <nav>
+        <p>
+            <a href="https://cursoemvideo.com" target="tela">Link externo</a>
+            <a href="pag012.html" target="tela">Link interno</a>
+            <a href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31680401.060000386!2d-53.186502!3d-14.239424000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1667652863031!5m2!1spt-BR!2sbr" target="tela">Mapa do Google</a>
+            <a href="https://embed.waze.com/iframe?zoom=14&lat=-21.697329&lon=-45.256259&ct=livemap" target="tela">Mapa do Waze</a>
+            <a href="https://docs.google.com/presentation/d/e/2PACX-1vTvKKTNvXFmZ-vm3kuyDqMSh27_kX6zMUtqQ9ST_51iq058kMDgdvOAtyVRtIkb6Yge-o_MvWo7Qf3D/embed?start=false&loop=false&delayms=3000" target="tela">Google Docs</a>
+            <a href="index.html" rel="previous">Voltar</a>
+        </p>
+    </nav>
+    <iframe src="" frameborder="1" name="tela" srcdoc="<p style='font-family: Arial; font-size: 1.5em'>Selecione uma opção acima.</p>"></iframe>
+</body>
+
+</html>
