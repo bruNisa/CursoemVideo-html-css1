@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/flo.ico" type="image/x-icon">
+    <title>Formulários</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset {
+            background-color: rgba(250, 128, 114, 0.274);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Campos para formulário</h1>
+    <form action="" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" size="20" placeholder="Nome do Usuário">
+            </p>
+            <p><label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" size="25">
+            </p>
+            <p><label for="ialtura">Altura:</label>
+                <input type="number" name="altura" id="ialtura" min="0" max="2.5" step="0.1">
+            </p>
+            <p><label for="itelefone">Telefone:</label>
+                <input type="tel" name="telefone" id="itelefone" pattern="\d{4,5}-\q{4}" autocomplete="tel" size="15">
+            </p>
+            <p><label for="iano">Ano de Nascimento:</label>
+                <input type="number" name="ano" id="iano" min="1900" max="2022" oninput="calcIdade()">
+            </p>
+            <p><label for="iidade">Sua idade é:</label>
+                <output name="idade" id="iidade"></output>
+            </p>
+
+            <p><label for="iestado">Estado:</label>
+                <select name="estado" id="iestado">
+                    <option value="" selected>  --- Escolha ---</option>
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espírito Santo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="SC">Santa Catarina</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p><label for="iprofissao">Profissão:</label>
+                <input type="text" name="profissao" id="iprofissao" list="prof">
+                <datalist id="prof">
+                    <option value="ADM">Administração</option>
+                    <option value="ENG">Engenharia</option>
+                    <option value="MED">Medicina</option>
+                    <option value="TI">Tecnologia</option>
+                </datalist>
+            </p>
+
+            <fieldset>
+                <legend>Sexo</legend>
+                <p><input type="radio" name="sexo" id="ifem" value="F" checked>
+                    <label for="ifem">Feminino</label>
+                </p>
+                <p><input type="radio" name="sexo" id="imas" value="M">
+                    <label for="imas">Masculino</label>
+                </p>
+            </fieldset>
+        </fieldset>
+        <p><label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" minlength="5" maxlength="10" size="12"
+                autocomplete="new-password">
+        </p>
+        <p><label for="imes">Escolha um mês:</label>
+            <input type="month" name="mes" id="imes">
+        </p>
+        <p><label for="idata">Data:</label>
+            <input type="date" name="data" id="idata">
+        </p>
+        <p><label for="ihora">Hora:</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p><label for="iemail">Email:</label>
+            <input type="email" name="email" id="iemail">
+        </p>
+
+        <fieldset>
+            <legend>Checkbox</legend>
+            <p><input type="checkbox" name="brasil" id="ibrasil" checked>
+                <label for="ibrasil">Brasil</label>
+            </p>
+            <p><input type="checkbox" name="arg" id="iarg">
+                <label for="iarg">Argentina</label>
+            </p>
+            <p><input type="checkbox" name="chile" id="ichile">
+                <label for="ichile">Chile</label>
+            </p>
+            <p><input type="checkbox" name="paraguai" id="iparaguai">
+                <label for="iparaguai">Paraguai</label>
+            </p>
+        </fieldset>
+
+        <p><label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor">
+        </p>
+        <p><label for="inivel">Nível:</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="2">
+        </p>
+        <p><label for="iarquivo">Arquivo:</label>
+            <input type="file" name="arquivo" id="iarquivo">
+        </p>
+
+        <p><label for="iapres">Apresentação:</label>
+            <textarea name="apres" id="iapres" cols="30" rows="10">Texto padrão</textarea>
+        </p>
+
+        <fieldset>
+            <legend>Soma</legend>
+            <p><label for="in1">N1</label>
+                <input type="number" name="n1" id="in1"
+                oninput="iresul.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p><label for="in2">N2</label>
+                <input type="number" name="n2" id="in2"
+                oninput="iresul.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p>
+            <p><label for="iresul">Resultado:</label>
+                <output name="resul" id="iresul">0</output>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <script>
+        function calcIdade(){
+            let atual= new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+
+</html>
