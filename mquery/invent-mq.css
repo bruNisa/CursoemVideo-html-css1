@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* config para tablet*/
+    body{
+        background-image: linear-gradient(to top,#edafb8, #2f6690);
+    }
+
+    section#inventario{
+        width: 80vw;
+        height: 300px;
+    }
+
+    section#inventario > div#imagem{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#inventario > div#produto{
+        float: right;
+        width: 70%;
+    }
+
+    #burguer{
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+
+    menu > ul > li{
+        display: inline-block;
+        width: 100px;
+    }
+
+    div#produto > p{
+        font-size: 1em;
+        margin: 10px 0px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, #2f6690, #edafb8);
+    }
+    
+    #burguer{
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+
+    menu > ul > li{
+        display: inline-block;
+        width: 100px;
+    }
+
+    section#inventario{
+        width: 950px;
+        height: 350px;
+    }
+
+    section#inventario > div#imagem{
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#inventario > div#produto{
+        float: left;
+        width: 50%;
+    }
+
+    div#produto > h2{
+        font-size: 2em;
+    }
+
+    div#produto > p{
+        font-size: 1.2em;
+        margin: 20px 0px;
+    }
+}

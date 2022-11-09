@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #2f6690;
+    --cor2: #edafb8;
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+body, html{
+    background-color: var(--cor1);
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    background-color:#5c7b92;
+    padding-bottom: 2px;
+}
+
+header > h1{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#burguer{
+    display: block;
+    background-color: #093c63 ;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+#burguer:hover{
+    background-color: var(--cor2);
+}
+
+menu{
+    display: none;
+}
+
+menu > ul{
+    list-style-type: none;
+}
+
+menu > ul > li > a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #093c63;
+    color: white;
+    border-top: 1px solid var(--cor1);
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+menu > ul > li > a:hover{
+    background-color: var(--cor1);
+}
+
+main{
+    margin-top: 20px;
+    padding: 15px;
+}
+
+section#inventario{
+    display: block;
+    margin: auto;
+    background-color: white;
+    height: 500px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+}
+
+section#inventario > div#imagem{
+    display: block;
+    background: var(--cor2) url("imagens/invent.jpg") no-repeat;
+    background-size: cover;
+    background-position: left top;
+    height: 200px;
+    border-radius: 10px ;
+}
+
+section#inventario > div#produto{
+    display: block;
+    padding: 10px;
+}
+
+div#produto > h2{
+    text-align: center;
+}
+
+div#produto > p{
+    font-size: 0.9em;
+}
+
+form > div.campo{
+    display: block;
+    background-color: var(--cor1);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+div.campo > span{
+    color: white;
+    font-size: 1.8em;
+    padding-top: 2px;
+}
+
+div.campo > input{
+    background-color: #d6b1b7;
+    height: 100%;
+    width: calc(100% - 40px);
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translatey(-7px);
+}
+div.campo > input:focus-within{
+    background-color: white;
+}
+
+div.campo > label{
+    display: none;
+}
+
+form > input.botao{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: #5c7b92;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+    transition: 0.7s;
+}
+form > input.botao:hover{
+    background-color: white;
+    border: 2px solid #5c7b92;
+}
+
+input#registrar{
+    margin-top: 15px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--cor2);
+    color:var(--cor1);
+    text-align: center;
+    padding: 5px;
+}
