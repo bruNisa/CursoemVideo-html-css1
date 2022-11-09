@@ -24,6 +24,7 @@
 
 @media screen and (min-width: 992px) { /* pc */
     body{
+        height: 100vh;
         background-image: linear-gradient(to top,#49a09d ,#5f2c82 );
     }
 
